@@ -28,3 +28,15 @@ jobs:
         run: |
           yamllint .
           ansible-lint
+          
+  integration:
+    name: Integration
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os:
+          - macos-10.15
+
+    steps:
+      - name: Check out the codebase.
+        uses: actions/checkout@v2
