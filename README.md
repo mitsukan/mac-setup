@@ -6,4 +6,6 @@ This is written to set up a fresh install of MacOS.
 2. `export PATH="$HOME/Library/Python/3.8/bin:/opt/homebrew/bin:$PATH"`
 3. `sudo pip3 install --upgrade pip`
 4. `sudo pip3 install ansible`
-5. `ansible-playbook main.yml`
+
+## Run the playbook
+`ansible-playbook main.yml`
