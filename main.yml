@@ -1,0 +1,10 @@
+---
+- name: MacOS setup
+  hosts: self
+  user: jihinip
+  connection: local
+
+  tasks:
+    - homebrew:
+      update_homebrew: yes
+      upgrade_all: yes
