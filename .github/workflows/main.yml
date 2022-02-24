@@ -51,6 +51,6 @@ jobs:
           # Required, playbook filepath
           playbook: main.yml
           # Optional, directory where playbooks live
-          directory: ./
+          # directory: ./
           # Optional, galaxy requirements filepath
           # requirements: galaxy-requirements.yml
