@@ -44,3 +44,6 @@ jobs:
 
       - name: Uninstall GitHub Actions' built-in Homebrew.
         run: tests/uninstall-homebrew.sh
+
+      - name: Install homebrew
+        run: ansible-playbook main.yml
