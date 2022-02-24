@@ -45,5 +45,12 @@ jobs:
       - name: Uninstall GitHub Actions' built-in Homebrew.
         run: tests/uninstall-homebrew.sh
 
-      - name: Install homebrew
-        run: ansible-playbook main.yml
+      - name: Run playbook
+        uses: dawidd6/action-ansible-playbook@v2
+        with:
+          # Required, playbook filepath
+          playbook: main.yml
+          # Optional, directory where playbooks live
+          directory: ./
+          # Optional, galaxy requirements filepath
+          # requirements: galaxy-requirements.yml
