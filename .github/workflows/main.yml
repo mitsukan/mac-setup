@@ -45,16 +45,11 @@ jobs:
       - name: Uninstall GitHub Actions' built-in Homebrew.
         run: tests/uninstall-homebrew.sh
 
-      # - name: Set up Python 3.
-      #   uses: actions/setup-python@v2
-      #   with:
-      #     python-version: '3.x'
-
       - name: pip3 upgrade pip
         run: sudo pip3 install --upgrade pip
 
       - name: Install test dependencies.
-        run: sudo pip3 install ansible
+        run: sudo pip3 install ansible ansible-core
 
       - name: Run ansible playbook
         run: ansible-playbook main.yml
