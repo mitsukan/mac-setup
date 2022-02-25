@@ -51,7 +51,7 @@ jobs:
           python-version: '3.x'
 
       - name: Install test dependencies.
-        run: pip3 install ansible
+        run: sudo pip3 install ansible
       
       - name: Run ansible playbook
         run: ansible-playbook main.yml
