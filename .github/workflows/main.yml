@@ -45,12 +45,13 @@ jobs:
       - name: Uninstall GitHub Actions' built-in Homebrew.
         run: tests/uninstall-homebrew.sh
 
-      - name: Run Ansible playbook
-        uses: dawidd6/action-ansible-playbook@v2.5.0
+      - name: Set up Python 3.
+        uses: actions/setup-python@v2
         with:
-          # Required, playbook filepath
-          playbook: main.yml
-          # Optional, directory where playbooks live
-          # directory: ./
-          # Optional, galaxy requirements filepath
-          # requirements: galaxy-requirements.yml
+          python-version: '3.x'
+
+      - name: Install test dependencies.
+        run: pip3 install ansible
+      
+      - name: Run ansible playbook
+        run: ansible-playbook main.yml
